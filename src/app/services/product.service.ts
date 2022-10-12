@@ -44,7 +44,7 @@ export class Product {
   description?: string;
   specification?: string;
   price?: number;
-  stick?: number;
+  stock?: number;
   vendors?: Vendor[];
   image?: string;
   rating?: number;

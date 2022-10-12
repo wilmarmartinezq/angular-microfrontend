@@ -86,7 +86,7 @@ export class AppComponent {
   saveProduct() {
     this.submitted = true;
     if (this.product.name.trim()) {
-      if (this.product.id) {
+      if (this.product.id !== null && this.product.id !== undefined) {
         this.product.productGenre = this.productGenre.label;
         this.productService.updateProduct(this.product).subscribe(res => {
           this.product = res;
@@ -94,6 +94,10 @@ export class AppComponent {
           this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000 });
           this.productDialog = false;
           this.product = {};
+          const message = JSON.stringify({
+            channel: 'FROM_PRODUCT_FRAME'
+          });
+          window.parent.postMessage(message, '*');
         });
       }
       else {
