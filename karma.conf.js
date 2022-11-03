@@ -24,14 +24,7 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
-    coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-microfrontend'),
-      subdir: '.',
-      reporters: [
-        { type: 'html' },
-        { type: 'text-summary' }
-      ]
-    },
+    coverageReporter: { reporters: [ { type: 'lcov' }] },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
