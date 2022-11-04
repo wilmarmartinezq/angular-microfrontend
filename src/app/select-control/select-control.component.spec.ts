@@ -28,11 +28,6 @@ describe('SelectControlComponent', () => {
     const fn3 = () => {
     };
 
-    const fn4 = () => {
-    };
-
-    const fn5 = () => {
-    };
 
     component.registerOnChange(fn);
 
