@@ -18,6 +18,20 @@ describe('SelectControlComponent', () => {
     const fn = () => {
     };
 
+
+    const fn1 = () => {
+    };
+
+    const fn2 = () => {
+    };
+
+    const fn3 = () => {
+    };
+
+    const fn4 = () => {
+    };
+
+
     component.registerOnChange(fn);
 
     expect((component as any).onChange).toBe(fn)

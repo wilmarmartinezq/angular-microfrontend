@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, Output, Self} from '@angular/core';
 import {ControlValueAccessor, NgControl} from "@angular/forms";
 import {OptionWithLabel} from "./option-with-label.interface";
 
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
 @Component({
   selector: 'app-select-control',
   templateUrl: './select-control.component.html',
