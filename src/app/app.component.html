@@ -11,3 +11,19 @@
 </form>
 
 <li><b><a href="aorepo/">AORepo</a></b> - main channel, enabled by default - contains completed, coherent, and <a href="testing/">tested</a> packages.</li>
+
+<script>
+              //modelBuilder.Entity<CITestEntity>().Property(x => x.Id).HasMaxLength(128).ValueGeneratedOnAdd();
+
+  public override void Method() // Noncompliant
+{
+  base.Method();
+}
+
+public CITestDbContext CreateDbContext(string[] args)
+        {
+            var builder = new DbContextOptionsBuilder<CITestDbContext>();
+            builder.UseSqlServer("Data Source=(local);Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=virto;Password=virto;MultipleActiveResultSets=True;Connect Timeout=30");
+            return new CITestDbContext(builder.Options);
+        }
+</script>
